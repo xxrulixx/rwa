@@ -1,3 +1,4 @@
+import { QuestionAddUpdateComponent } from './components/question/question-add-update/question-add-update.component';
 import { QuestionComponent } from './components/question/question.component';
 import { TagComponent } from './components/tag/tag.component';
 import { CategoriesComponent } from './components/categories/categories.component';
@@ -22,6 +23,10 @@ export const routes: Routes = [
   {
     path: 'question',
     component: QuestionComponent
+  },
+  {
+    path: 'question/add',
+    component: QuestionAddUpdateComponent
   }
 ];
 

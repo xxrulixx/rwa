@@ -1,7 +1,7 @@
+import { QuestionAddUpdateComponent } from './components/question/question-add-update/question-add-update.component';
 import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,6 +13,7 @@ import { QuestionService } from './services/question.service';
 import { TagComponent } from './components/tag/tag.component';
 import { TagService } from './services/tag.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import 'hammerjs';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -22,7 +23,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppComponent,
     CategoriesComponent,
     QuestionComponent,
-    TagComponent
+    TagComponent,
+    QuestionAddUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
     MaterialModule,
     FlexLayoutModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+    // Forms
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [CategoryService, QuestionService, TagService],
   bootstrap: [AppComponent]
