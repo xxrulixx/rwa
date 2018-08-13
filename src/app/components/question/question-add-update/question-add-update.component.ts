@@ -94,8 +94,8 @@ export class QuestionAddUpdateComponent implements OnInit, OnDestroy {
             tags: '',
             tagsArray: tagsFA,
             answers: answersFA,
-            //     ordered: [question.ordered],
-            //     explanation: [question.explanation]
+                ordered: [question.ordered],
+                explanation: [question.explanation]
             }, {
                 validator: questionFormValidator
         });
@@ -212,23 +212,3 @@ function questionFormValidator(fg: FormGroup): {
     return null;
 }
 
-// Custom Validators
-// function questionFormValidator(fg: FormGroup): {
-//     [key: string]: boolean
-// } {
-//     const answers: Answer[] = fg.get('answers').value;
-//     if (answers.filter(answer => answer.correct).length !== 1) {
-//         return {
-//             'correctAnswerCountInvalid': true
-//         };
-//     }
-
-//     const tags: string[] = fg.get('tagsArray').value;
-//     if (tags.length < 3) {
-//         return {
-//             'tagCountInvalid': true
-//         };
-//     }
-
-//     return null;
-// }
